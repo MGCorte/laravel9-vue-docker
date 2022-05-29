@@ -1,0 +1,7 @@
+ul.list-content li {
+    margin: 0.5em 0;
+}
+
+ul.list-content li a {
+    text-decoration: none;
+}

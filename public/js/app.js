@@ -1,17 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@babel/runtime/regenerator/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
-
-
-/***/ }),
-
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -2095,14 +2084,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/git/ListNameRepository.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/git/ListNameRepository.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Loading.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Loading.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2136,6 +2131,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/git/ListNameRepository.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/git/ListNameRepository.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Loading__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Loading */ "./resources/js/components/Loading.vue");
 //
 //
 //
@@ -2156,12 +2167,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Loading: _Loading__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       repositories: [],
       language: '',
-      salvo: false
+      salvo: false,
+      loading: false
     };
   },
   mounted: function mounted() {
@@ -2169,6 +2222,7 @@ __webpack_require__.r(__webpack_exports__);
     this.language = this.$route.params.name;
   },
   created: function created() {
+    this.loading = true;
     this.getResults(this.$route.params.page);
   },
   methods: {
@@ -2178,7 +2232,7 @@ __webpack_require__.r(__webpack_exports__);
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       this.axios.get("https://api.github.com/search/repositories?q=".concat(this.$route.params.name, "&sort=stars&order=desc&page=").concat(page, "&per_page=10")).then(function (response) {
         _this.repositories = response.data.items;
-        console.log(response.data);
+        _this.loading = false;
       });
     }
   }
@@ -2197,9 +2251,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Loading__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Loading */ "./resources/js/components/Loading.vue");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -2269,12 +2324,58 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Loading: _Loading__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       repository: {},
       repository_local: false,
-      salvo: false
+      save: false,
+      saving: false,
+      loading: false
     };
   },
   created: function created() {
@@ -2292,17 +2393,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     getdados: function getdados() {
       var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                _this.loading = true;
+                _context.next = 3;
                 return _this.axios.get("https://api.github.com/repositories/".concat(_this.$route.params.id)).then(function (response) {
                   _this.repository = response.data;
+                  _this.loading = false;
                 });
 
-              case 2:
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -2313,17 +2416,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     getLocal: function getLocal() {
       var _this2 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
+                _this2.loading = true;
+                _context2.next = 3;
                 return _this2.axios.get("http://localhost:8000/api/respository/showgit/".concat(_this2.$route.params.id)).then(function (response) {
                   _this2.repository_local = response.data.length > 0 ? true : false;
+                  _this2.loading = false;
                 });
 
-              case 2:
+              case 3:
               case "end":
                 return _context2.stop();
             }
@@ -2338,10 +2443,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     saveItem: function saveItem() {
       var _this3 = this;
 
+      this.saving = true;
       this.axios.post("http://localhost:8000/api/respository/store", this.repository).then(function (response) {
-        _this3.salvo = true;
+        _this3.save = true;
+        _this3.saving = false;
       })["catch"](function (err) {
         console.log(err);
+        _this3.saving = false;
       });
     }
   }
@@ -2360,6 +2468,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _Loading__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Loading */ "./resources/js/components/Loading.vue");
 //
 //
 //
@@ -2409,23 +2518,51 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Loading: _Loading__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
-      repositories: []
+      repositories: [],
+      loading: false
     };
   },
   created: function created() {
     var _this = this;
 
+    this.loading = true;
     this.axios.get('http://localhost:8000/api/repositories').then(function (response) {
       _this.repositories = response.data;
+      _this.loading = false;
     });
   },
   methods: {
     deletePost: function deletePost(id) {
       var _this2 = this;
 
+      this.loading = true;
       this.axios["delete"]("http://localhost:8000/api/respository/delete/".concat(id)).then(function (response) {
         var i = _this2.repositories.map(function (item) {
           return item.id;
@@ -2433,6 +2570,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
         _this2.repositories.splice(i, 1);
+
+        _this2.loading = false;
       });
     }
   }
@@ -2451,6 +2590,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _Loading__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Loading */ "./resources/js/components/Loading.vue");
 //
 //
 //
@@ -2494,17 +2634,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Loading: _Loading__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
-      repository: {}
+      repository: {},
+      loading: false
     };
   },
   created: function created() {
     var _this = this;
 
+    this.loading = true;
     this.axios.get("http://localhost:8000/api/respository/show/".concat(this.$route.params.id)).then(function (response) {
       _this.repository = response.data;
+      _this.loading = false;
     });
   },
   methods: {}
@@ -41639,770 +41809,6 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/regenerator-runtime/runtime.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var runtime = (function (exports) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  function define(obj, key, value) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-    return obj[key];
-  }
-  try {
-    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
-    define({}, "");
-  } catch (err) {
-    define = function(obj, key, value) {
-      return obj[key] = value;
-    };
-  }
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  exports.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  define(IteratorPrototype, iteratorSymbol, function () {
-    return this;
-  });
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = GeneratorFunctionPrototype;
-  define(Gp, "constructor", GeneratorFunctionPrototype);
-  define(GeneratorFunctionPrototype, "constructor", GeneratorFunction);
-  GeneratorFunction.displayName = define(
-    GeneratorFunctionPrototype,
-    toStringTagSymbol,
-    "GeneratorFunction"
-  );
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      define(prototype, method, function(arg) {
-        return this._invoke(method, arg);
-      });
-    });
-  }
-
-  exports.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  exports.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      define(genFun, toStringTagSymbol, "GeneratorFunction");
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  exports.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator, PromiseImpl) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return PromiseImpl.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return PromiseImpl.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new PromiseImpl(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
-    return this;
-  });
-  exports.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
-    if (PromiseImpl === void 0) PromiseImpl = Promise;
-
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList),
-      PromiseImpl
-    );
-
-    return exports.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        // Note: ["return"] must be used for ES3 parsing compatibility.
-        if (delegate.iterator["return"]) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  define(Gp, toStringTagSymbol, "Generator");
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  define(Gp, iteratorSymbol, function() {
-    return this;
-  });
-
-  define(Gp, "toString", function() {
-    return "[object Generator]";
-  });
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  exports.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  exports.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-
-  // Regardless of whether this script is executing as a CommonJS module
-  // or not, return the runtime object so that we can declare the variable
-  // regeneratorRuntime in the outer scope, which allows this module to be
-  // injected easily by `bin/regenerator --include-runtime script.js`.
-  return exports;
-
-}(
-  // If this script is executing as a CommonJS module, use module.exports
-  // as the regeneratorRuntime namespace. Otherwise create a new empty
-  // object. Either way, the resulting object will be used to initialize
-  // the regeneratorRuntime variable at the top of this file.
-   true ? module.exports : 0
-));
-
-try {
-  regeneratorRuntime = runtime;
-} catch (accidentalStrictMode) {
-  // This module should not be running in strict mode, so the above
-  // assignment should always work unless something is misconfigured. Just
-  // in case runtime.js accidentally runs in strict mode, in modern engines
-  // we can explicitly access globalThis. In older engines we can escape
-  // strict mode using a global Function call. This could conceivably fail
-  // if a Content Security Policy forbids using Function, but in that case
-  // the proper solution is to fix the accidental strict mode problem. If
-  // you've misconfigured your bundler to force strict mode and applied a
-  // CSP to forbid Function, and you're not willing to fix either of those
-  // problems, please detail your unique predicament in a GitHub issue.
-  if (typeof globalThis === "object") {
-    globalThis.regeneratorRuntime = runtime;
-  } else {
-    Function("r", "regeneratorRuntime = r")(runtime);
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-axios/dist/vue-axios.esm.min.js":
 /*!**********************************************************!*\
   !*** ./node_modules/vue-axios/dist/vue-axios.esm.min.js ***!
@@ -42454,6 +41860,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/App.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Loading.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Loading.vue ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Loading_vue_vue_type_template_id_6ca9e6be___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Loading.vue?vue&type=template&id=6ca9e6be& */ "./resources/js/components/Loading.vue?vue&type=template&id=6ca9e6be&");
+/* harmony import */ var _Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Loading.vue?vue&type=script&lang=js& */ "./resources/js/components/Loading.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Loading_vue_vue_type_template_id_6ca9e6be___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Loading_vue_vue_type_template_id_6ca9e6be___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Loading.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -42630,6 +42075,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Loading.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Loading.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Loading.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/git/ListNameRepository.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************!*\
   !*** ./resources/js/components/git/ListNameRepository.vue?vue&type=script&lang=js& ***!
@@ -42707,6 +42168,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_f348271a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=template&id=f348271a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/App.vue?vue&type=template&id=f348271a&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Loading.vue?vue&type=template&id=6ca9e6be&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Loading.vue?vue&type=template&id=6ca9e6be& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_6ca9e6be___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_6ca9e6be___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_6ca9e6be___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=template&id=6ca9e6be& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Loading.vue?vue&type=template&id=6ca9e6be&");
 
 
 /***/ }),
@@ -42795,10 +42273,18 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "mb-5" }, [_c("router-view")], 1),
+    _c(
+      "main",
+      { staticClass: "container", attrs: { id: "content", role: "main" } },
+      [_c("div", { staticClass: "mb-2" }, [_c("router-view")], 1)]
+    ),
+    _vm._v(" "),
+    _c("footer", { staticClass: "bg-light p-3 text-center" }, [
+      _vm._v("\n        Criado por Marcelo Giovani Corte\n    "),
+    ]),
   ])
 }
 var staticRenderFns = [
@@ -42806,24 +42292,103 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-2 mb-2 bg-light p-2" }, [
-      _c("div", { staticClass: "col-3 col-xs-3 col-md-1" }, [
-        _c("a", { attrs: { href: "/" } }, [
-          _c("img", {
-            attrs: {
-              height: "40",
-              src: "storage/images/logo-github.png",
-              alt: "",
-            },
-          }),
+    return _c("header", [
+      _c("div", { staticClass: "row m-0 mb-2 bg-light p-0 pt-2 pb-2" }, [
+        _c("div", { staticClass: "col-3 col-xs-3 col-md-1 text-center" }, [
+          _c("a", { attrs: { href: "/" } }, [
+            _c("img", {
+              attrs: {
+                height: "40",
+                src: "/storage/images/logo-github.png",
+                alt: "",
+              },
+            }),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-9 col-xs-9 col-md-9 text-left pt-1" }, [
+          _c("h4", { staticClass: "text-secondary" }, [
+            _vm._v("Repositórios GitHub"),
+          ]),
         ]),
       ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Loading.vue?vue&type=template&id=6ca9e6be&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Loading.vue?vue&type=template&id=6ca9e6be& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "div",
+        { staticClass: "spinner-grow text-primary", attrs: { role: "status" } },
+        [_c("span", { staticClass: "sr-only" })]
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "col-9 col-xs-9 col-md-11 text-left" }, [
-        _c("h4", { staticClass: "text-secondary" }, [
-          _vm._v("Repositórios GitHub"),
-        ]),
-      ]),
+      _c(
+        "div",
+        {
+          staticClass: "spinner-grow text-secondary",
+          attrs: { role: "status" },
+        },
+        [_c("span", { staticClass: "sr-only" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "spinner-grow text-success", attrs: { role: "status" } },
+        [_c("span", { staticClass: "sr-only" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "spinner-grow text-danger", attrs: { role: "status" } },
+        [_c("span", { staticClass: "sr-only" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "spinner-grow text-warning", attrs: { role: "status" } },
+        [_c("span", { staticClass: "sr-only" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "spinner-grow text-info", attrs: { role: "status" } },
+        [_c("span", { staticClass: "sr-only" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "spinner-grow text-dark", attrs: { role: "status" } },
+        [_c("span", { staticClass: "sr-only" })]
+      ),
     ])
   },
 ]
@@ -42882,39 +42447,84 @@ var render = function () {
           _vm._v(" "),
           _c(
             "tbody",
-            _vm._l(_vm.repositories, function (repository) {
-              return _c("tr", { key: repository.id }, [
-                _c("td", [_vm._v(_vm._s(repository.id))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(repository.name))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(repository.stargazers_count))]),
-                _vm._v(" "),
-                _c("td", [
-                  _c(
-                    "div",
-                    { staticClass: "text-center", attrs: { role: "group" } },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "btn btn-primary",
-                          attrs: {
-                            to: {
-                              name: "showgit",
-                              params: { id: repository.id },
+            [
+              _c(
+                "tr",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.loading,
+                      expression: "loading",
+                    },
+                  ],
+                },
+                [_c("td", { attrs: { colspan: "4" } }, [_c("loading")], 1)]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.repositories, function (repository) {
+                return _c("tr", { key: repository.id }, [
+                  _c("td", [_vm._v(_vm._s(repository.id))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(repository.name))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(repository.stargazers_count))]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "div",
+                      { staticClass: "text-center", attrs: { role: "group" } },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            attrs: {
+                              to: {
+                                name: "showgit",
+                                params: { id: repository.id },
+                              },
                             },
                           },
-                        },
-                        [_vm._v("+")]
-                      ),
-                    ],
-                    1
-                  ),
-                ]),
-              ])
-            }),
-            0
+                          [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "bi bi-eye-fill",
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "16",
+                                  height: "16",
+                                  fill: "currentColor",
+                                  viewBox: "0 0 16 16",
+                                },
+                              },
+                              [
+                                _c("title", [_vm._v("Visualizar detalhes")]),
+                                _vm._v(" "),
+                                _c("path", {
+                                  attrs: {
+                                    d: "M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c("path", {
+                                  attrs: {
+                                    d: "M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z",
+                                  },
+                                }),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ],
+                      1
+                    ),
+                  ]),
+                ])
+              }),
+            ],
+            2
           ),
         ]),
       ]),
@@ -42976,337 +42586,430 @@ var render = function () {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-6 col-md-6 text-center" }, [
-        _vm.repository_local || _vm.salvo
-          ? _c("button", { staticClass: "btn btn-success mb-2" }, [
-              _vm._v("Repositório Salvo"),
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        _c(
-          "form",
-          {
-            attrs: { method: "POST" },
-            on: {
-              submit: function ($event) {
-                $event.preventDefault()
-                return _vm.saveItem.apply(null, arguments)
-              },
-            },
-          },
-          [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.id,
-                  expression: "repository.id",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.id },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "id", $event.target.value)
-                },
-              },
-            }),
+    _vm.loading
+      ? _c("div", { staticClass: "row mt-5" }, [
+          _c(
+            "div",
+            { staticClass: "col-md-12 text-center" },
+            [_c("loading")],
+            1
+          ),
+        ])
+      : _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 col-xs-12 col-md-12 text-left" }, [
+            _vm.repository_local || _vm.save
+              ? _c("button", { staticClass: "btn btn-success mb-2" }, [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "bi bi-check2-all",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        width: "16",
+                        height: "16",
+                        fill: "currentColor",
+                        viewBox: "0 0 16 16",
+                      },
+                    },
+                    [
+                      _c("title", [_vm._v("Salvo na base local")]),
+                      _vm._v(" "),
+                      _c("path", {
+                        attrs: {
+                          d: "M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("path", {
+                        attrs: {
+                          d: "m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z",
+                        },
+                      }),
+                    ]
+                  ),
+                  _vm._v(
+                    "\n                    Salvo na base local\n                "
+                  ),
+                ])
+              : _vm._e(),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.name,
-                  expression: "repository.name",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.name },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "name", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.description,
-                  expression: "repository.description",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.description },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "description", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.owner.avatar_url,
-                  expression: "repository.owner.avatar_url",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.owner.avatar_url },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(
-                    _vm.repository.owner,
-                    "avatar_url",
-                    $event.target.value
-                  )
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.full_name,
-                  expression: "repository.full_name",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.full_name },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "full_name", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.stargazers_count,
-                  expression: "repository.stargazers_count",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.stargazers_count },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(
-                    _vm.repository,
-                    "stargazers_count",
-                    $event.target.value
-                  )
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.html_url,
-                  expression: "repository.html_url",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.html_url },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "html_url", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.homepage,
-                  expression: "repository.homepage",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.homepage },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "homepage", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.language,
-                  expression: "repository.language",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.language },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "language", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.topics,
-                  expression: "repository.topics",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.topics },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "topics", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.created_at,
-                  expression: "repository.created_at",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.created_at },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "created_at", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.repository.updated_at,
-                  expression: "repository.updated_at",
-                },
-              ],
-              staticClass: "d-none",
-              attrs: { type: "text" },
-              domProps: { value: _vm.repository.updated_at },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.repository, "updated_at", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            !_vm.salvo && !_vm.repository_local
+            !_vm.save && !_vm.repository_local
               ? _c(
-                  "button",
+                  "form",
                   {
-                    staticClass: "btn btn-warning mb-2",
-                    attrs: { type: "submit" },
+                    attrs: { method: "POST" },
+                    on: {
+                      submit: function ($event) {
+                        $event.preventDefault()
+                        return _vm.saveItem.apply(null, arguments)
+                      },
+                    },
                   },
-                  [_vm._v("Salvar repositório")]
+                  [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.id,
+                          expression: "repository.id",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.id },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.repository, "id", $event.target.value)
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.name,
+                          expression: "repository.name",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.name },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.repository, "name", $event.target.value)
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.description,
+                          expression: "repository.description",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.description },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "description",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.owner.avatar_url,
+                          expression: "repository.owner.avatar_url",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.owner.avatar_url },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository.owner,
+                            "avatar_url",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.full_name,
+                          expression: "repository.full_name",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.full_name },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "full_name",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.stargazers_count,
+                          expression: "repository.stargazers_count",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.stargazers_count },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "stargazers_count",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.html_url,
+                          expression: "repository.html_url",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.html_url },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "html_url",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.homepage,
+                          expression: "repository.homepage",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.homepage },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "homepage",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.language,
+                          expression: "repository.language",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.language },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "language",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.topics,
+                          expression: "repository.topics",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.topics },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "topics",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.created_at,
+                          expression: "repository.created_at",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.created_at },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "created_at",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.repository.updated_at,
+                          expression: "repository.updated_at",
+                        },
+                      ],
+                      staticClass: "d-none",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.repository.updated_at },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.repository,
+                            "updated_at",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-warning mb-2",
+                        attrs: { type: "submit" },
+                      },
+                      [
+                        _c("span", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.saving,
+                              expression: "saving",
+                            },
+                          ],
+                          staticClass: "spinner-grow spinner-grow-sm",
+                          attrs: { role: "status", "aria-hidden": "true" },
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "bi bi-save2-fill",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              width: "16",
+                              height: "16",
+                              fill: "currentColor",
+                              viewBox: "0 0 16 16",
+                            },
+                          },
+                          [
+                            _c("title", [_vm._v("Salvar na balse local")]),
+                            _vm._v(" "),
+                            _c("path", {
+                              attrs: {
+                                d: "M8.5 1.5A1.5 1.5 0 0 1 10 0h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6c-.314.418-.5.937-.5 1.5v6h-2a.5.5 0 0 0-.354.854l2.5 2.5a.5.5 0 0 0 .708 0l2.5-2.5A.5.5 0 0 0 10.5 7.5h-2v-6z",
+                              },
+                            }),
+                          ]
+                        ),
+                        _vm._v(
+                          "\n                        Salvar na balse local\n                    "
+                        ),
+                      ]
+                    ),
+                  ]
                 )
               : _vm._e(),
-          ]
-        ),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-6 col-md-6 text-center" },
-        [
-          _c(
-            "router-link",
-            { staticClass: "nav-item btn btn-primary", attrs: { to: "/" } },
-            [_vm._v("Voltar ao início")]
-          ),
-        ],
-        1
-      ),
-    ]),
+          ]),
+        ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12" }, [
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Linguagem"),
+        _c("h3", { staticClass: "mb-3" }, [
+          _vm._v("Linguagem: " + _vm._s(_vm.repository.language)),
         ]),
         _vm._v(" "),
-        _c("h3", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.language)),
-        ]),
-        _vm._v(" "),
-        _c("h4", { staticClass: "px-3" }, [
+        _c("h4", { staticClass: "mb-3" }, [
           _vm.repository.owner.avatar_url
             ? _c("img", {
                 attrs: {
@@ -43316,112 +43019,125 @@ var render = function () {
                 },
               })
             : _vm._e(),
-          _vm._v(" " + _vm._s(_vm.repository.name)),
+          _vm._v(
+            "\n                    " +
+              _vm._s(_vm.repository.name) +
+              "\n                "
+          ),
         ]),
         _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("ID do Repositório"),
+        _c("ul", { staticClass: "list-content text-break" }, [
+          _c("li", [
+            _c("strong", [_vm._v("ID do Repositório:")]),
+            _vm._v("\n                        " + _vm._s(_vm.repository.id)),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Nome completo:")]),
+            _vm._v(
+              " " + _vm._s(_vm.repository.full_name) + "\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v(" Estrelas:")]),
+            _vm._v(" " + _vm._s(_vm.repository.stargazers_count)),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Url do repositório:")]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: _vm.repository.html_url,
+                  title: _vm.repository.html_url,
+                  target: "_blank",
+                },
+              },
+              [
+                _vm._v(
+                  "\n                            " +
+                    _vm._s(_vm.repository.html_url) +
+                    "\n                        "
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Tópicos")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                            " +
+                  _vm._s(_vm.repository.topics) +
+                  "\n                        "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("HomePage do repositório")]),
+            _vm._v(" "),
+            _c("p", [
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: _vm.repository.homepage,
+                    title: _vm.repository.homepage,
+                    target: "_blank",
+                  },
+                },
+                [
+                  _vm._v(
+                    "\n                                " +
+                      _vm._s(_vm.repository.homepage) +
+                      "\n                            "
+                  ),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Criado em:")]),
+            _vm._v(
+              " " + _vm._s(_vm.repository.created_at) + "\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("strong", [_vm._v("Alterado em:")]),
+            _vm._v(
+              " " + _vm._s(_vm.repository.updated_at) + "\n                    "
+            ),
+          ]),
         ]),
         _vm._v(" "),
-        _c("h3", { staticClass: "px-3" }, [_vm._v(_vm._s(_vm.repository.id))]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Nome completo"),
-        ]),
-        _vm._v(" "),
-        _c("h4", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.full_name)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary mt-2" }, [
-          _vm._v("Descrição"),
-        ]),
+        _c("h5", [_vm._v("Descrição")]),
         _vm._v(" "),
         _c("p", [_vm._v(_vm._s(_vm.repository.description))]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Estrelas"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.stargazers_count)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Url do repositório"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _c(
-            "a",
-            {
-              attrs: {
-                href: _vm.repository.html_url,
-                title: _vm.repository.html_url,
-                target: "_blank",
-              },
-            },
-            [_vm._v(_vm._s(_vm.repository.html_url))]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("HomePage do repositório"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _c(
-            "a",
-            {
-              attrs: {
-                href: _vm.repository.homepage,
-                title: _vm.repository.homepage,
-                target: "_blank",
-              },
-            },
-            [_vm._v(_vm._s(_vm.repository.homepage))]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Tópicos"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.topics)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Criado em"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.created_at)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Alterado em"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.updated_at)),
-        ]),
       ]),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-12" },
-        [
-          _c(
-            "router-link",
-            { staticClass: "btn btn-primary ", attrs: { to: "/" } },
-            [_vm._v("VOLTAR")]
-          ),
-        ],
-        1
-      ),
+      _c("div", { staticClass: "col-md-12" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary",
+            on: {
+              click: function ($event) {
+                return _vm.$router.go(-1)
+              },
+            },
+          },
+          [_vm._v("Voltar")]
+        ),
+      ]),
     ]),
   ])
 }
@@ -43522,76 +43238,117 @@ var render = function () {
       ),
     ]),
     _vm._v(" "),
-    _c("h3", { staticClass: "text-center" }, [
-      _vm._v("Lista de Repositorios salvos"),
-    ]),
-    _vm._v(" "),
-    _c("table", { staticClass: "table table-hover table-striped" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "tbody",
-        _vm._l(_vm.repositories, function (repository) {
-          return _c("tr", { key: repository.id }, [
-            _c("td", [_vm._v(_vm._s(repository.name))]),
-            _vm._v(" "),
-            _c("td", { staticClass: "text-primary" }, [
-              _vm._v(_vm._s(repository.language)),
-            ]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(repository.stargazers_count))]),
-            _vm._v(" "),
-            _c("td", [
-              _c("div", { staticClass: "btn-group" }, [
-                _c("button", {
-                  staticClass: "btn btn-primary dropdown-toggle",
-                  attrs: {
-                    type: "button",
-                    "data-bs-toggle": "dropdown",
-                    "aria-expanded": "false",
-                  },
-                }),
-                _vm._v(" "),
-                _c("ul", { staticClass: "dropdown-menu" }, [
-                  _c(
-                    "li",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass:
-                            "dropdown-item bg-primary text-white mb-1",
-                          attrs: {
-                            to: { name: "show", params: { id: repository.id } },
-                          },
-                        },
-                        [_vm._v("Detalhes\n                            ")]
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "dropdown-item bg-danger text-white",
-                        on: {
-                          click: function ($event) {
-                            return _vm.deletePost(repository.id)
-                          },
-                        },
-                      },
-                      [_vm._v("Delete")]
-                    ),
-                  ]),
-                ]),
-              ]),
-            ]),
-          ])
-        }),
-        0
-      ),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12 mt-2 text-center" }, [
+        _c("h3", { staticClass: "text-center" }, [
+          _vm._v("Lista de Repositorios salvos"),
+        ]),
+        _vm._v(" "),
+        _c("table", { staticClass: "table table-hover table-striped" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            [
+              _c(
+                "tr",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.loading,
+                      expression: "loading",
+                    },
+                  ],
+                },
+                [_c("td", { attrs: { colspan: "4" } }, [_c("loading")], 1)]
+              ),
+              _vm._v(" "),
+              !_vm.repositories.length
+                ? _c("tr", [_vm._m(1)])
+                : _vm._l(_vm.repositories, function (repository) {
+                    return _c("tr", { key: repository.id }, [
+                      _c("td", [_vm._v(_vm._s(repository.name))]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-primary" }, [
+                        _vm._v(_vm._s(repository.language)),
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(repository.stargazers_count))]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("div", { staticClass: "btn-group dropleft" }, [
+                          _c("button", {
+                            staticClass:
+                              "btn btn-primary btn-xs dropdown-toggle",
+                            attrs: {
+                              type: "button",
+                              "data-bs-toggle": "dropdown",
+                              "aria-expanded": "false",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "ul",
+                            { staticClass: "dropdown-menu dropdown-menu-left" },
+                            [
+                              _c(
+                                "li",
+                                { staticClass: "p-1" },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass:
+                                        "dropdown-item bg-primary text-white",
+                                      attrs: {
+                                        to: {
+                                          name: "show",
+                                          params: { id: repository.id },
+                                        },
+                                      },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                            Ver detalhes\n                                        "
+                                      ),
+                                    ]
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "p-1" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "dropdown-item bg-danger text-white",
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.deletePost(repository.id)
+                                      },
+                                    },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                            Excluir\n                                        "
+                                    ),
+                                  ]
+                                ),
+                              ]),
+                            ]
+                          ),
+                        ]),
+                      ]),
+                    ])
+                  }),
+            ],
+            2
+          ),
+        ]),
+      ]),
     ]),
   ])
 }
@@ -43610,6 +43367,14 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Ação")]),
       ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { attrs: { colspan: "4" } }, [
+      _c("h6", [_vm._v("Não esistem repositóris salvos na base local")]),
     ])
   },
 ]
@@ -43638,132 +43403,146 @@ var render = function () {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Linguagem"),
-        ]),
-        _vm._v(" "),
-        _c("h3", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.language)),
-        ]),
-        _vm._v(" "),
-        _c("h4", [
-          _vm.repository.avatar_url
-            ? _c("img", {
-                attrs: { src: _vm.repository.avatar_url, height: "40" },
-              })
-            : _vm._e(),
-          _vm._v(" " + _vm._s(_vm.repository.name)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("ID do Repositório"),
-        ]),
-        _vm._v(" "),
-        _c("h3", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.repository_id)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Nome completo"),
-        ]),
-        _vm._v(" "),
-        _c("h4", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.full_name)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Descrição"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.description)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Estrelas"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.stargazers_count)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Url do repositório"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
+    _vm.loading
+      ? _c("div", { staticClass: "row mt-5" }, [
           _c(
-            "a",
-            {
-              attrs: {
-                href: _vm.repository.html_url,
-                title: _vm.repository.html_url,
-                target: "_blank",
-              },
-            },
-            [_vm._v(_vm._s(_vm.repository.html_url))]
+            "div",
+            { staticClass: "col-md-12 text-center" },
+            [_c("loading")],
+            1
           ),
+        ])
+      : _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("h3", { staticClass: "mb-3" }, [
+              _vm._v("Linguagem: " + _vm._s(_vm.repository.language)),
+            ]),
+            _vm._v(" "),
+            _c("h4", { staticClass: "mb-3" }, [
+              _vm.repository.avatar_url
+                ? _c("img", {
+                    attrs: { src: _vm.repository.avatar_url, height: "40" },
+                  })
+                : _vm._e(),
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.repository.name) +
+                  "\n            "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-content text-break" }, [
+              _c("li", [
+                _c("strong", [_vm._v("ID do Repositório:")]),
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.repository.repository_id)
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("strong", [_vm._v("Nome completo:")]),
+                _vm._v(" " + _vm._s(_vm.repository.full_name)),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _vm._v("Estrelas: " + _vm._s(_vm.repository.stargazers_count)),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("strong", [_vm._v("Url do repositório:")]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: _vm.repository.html_url,
+                      title: _vm.repository.html_url,
+                      target: "_blank",
+                    },
+                  },
+                  [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(_vm.repository.html_url) +
+                        "\n                    "
+                    ),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("strong", [_vm._v("Tópicos")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-break" }, [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(_vm.repository.topics) +
+                      "\n                    "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("strong", [_vm._v("HomePage do repositório")]),
+                _vm._v(" "),
+                _c("p", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: _vm.repository.homepage,
+                        title: _vm.repository.homepage,
+                        target: "_blank",
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                            " +
+                          _vm._s(_vm.repository.homepage) +
+                          "\n                        "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("strong", [_vm._v("Criado em:")]),
+                _vm._v(
+                  " " + _vm._s(_vm.repository.created_at) + "\n                "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("strong", [_vm._v("Alterado em:")]),
+                _vm._v(
+                  " " + _vm._s(_vm.repository.updated_at) + "\n                "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("h5", [_vm._v("Descrição")]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.repository.description))]),
+          ]),
         ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("HomePage do repositório"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _c(
-            "a",
-            {
-              attrs: {
-                href: _vm.repository.homepage,
-                title: _vm.repository.homepage,
-                target: "_blank",
-              },
-            },
-            [_vm._v(_vm._s(_vm.repository.homepage))]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Tópicos"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.topics)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Criado em"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.created_at)),
-        ]),
-        _vm._v(" "),
-        _c("label", { staticClass: "fw-bold text-primary" }, [
-          _vm._v("Alterado em"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "px-3" }, [
-          _vm._v(_vm._s(_vm.repository.updated_at)),
-        ]),
-      ]),
-    ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-12" },
-        [
-          _c(
-            "router-link",
-            { staticClass: "btn btn-primary ", attrs: { to: "/" } },
-            [_vm._v("VOLTAR")]
-          ),
-        ],
-        1
-      ),
+      _c("div", { staticClass: "col-md-12" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary",
+            on: {
+              click: function ($event) {
+                return _vm.$router.go(-1)
+              },
+            },
+          },
+          [_vm._v("Voltar")]
+        ),
+      ]),
     ]),
   ])
 }
@@ -43912,8 +43691,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /*!
-  * vue-router v3.5.3
-  * (c) 2021 Evan You
+  * vue-router v3.5.4
+  * (c) 2022 Evan You
   * @license MIT
   */
 /*  */
@@ -44431,7 +44210,7 @@ function parsePath (path) {
 }
 
 function cleanPath (path) {
-  return path.replace(/\/+/g, '/')
+  return path.replace(/\/(?:\s*\/)+/g, '/')
 }
 
 var isarray = Array.isArray || function (arr) {
@@ -45362,7 +45141,7 @@ function addRouteRecord (
         warn(
           false,
           "Named Route '" + (route.name) + "' has a default child route. " +
-            "When navigating to this named route (:to=\"{name: '" + (route.name) + "'\"), " +
+            "When navigating to this named route (:to=\"{name: '" + (route.name) + "'}\"), " +
             "the default child route will not be rendered. Remove the name from " +
             "this route and use the name of the default child route for named " +
             "links instead."
@@ -47053,7 +46832,7 @@ function createHref (base, fullPath, mode) {
 }
 
 VueRouter.install = install;
-VueRouter.version = '3.5.3';
+VueRouter.version = '3.5.4';
 VueRouter.isNavigationFailure = isNavigationFailure;
 VueRouter.NavigationFailureType = NavigationFailureType;
 VueRouter.START_LOCATION = START;

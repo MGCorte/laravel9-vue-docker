@@ -5,54 +5,82 @@
                 <h3 class="text-center text-primary">Detalhes do Respositório</h3>
             </div>
         </div>
-
-        <div class="row">
+        <div v-if="loading" class="row mt-5">
+            <div class="col-md-12 text-center">
+                <loading></loading>
+            </div>
+        </div>
+        <div v-else class="row">
             <div class="col-md-12">
-                <label class="fw-bold text-primary">Linguagem</label>
-                <h3 class="px-3">{{ repository.language }}</h3>
-                <h4><img v-if="repository.avatar_url" :src="repository.avatar_url" height="40"> {{ repository.name }}</h4>
-                <label class="fw-bold text-primary">ID do Repositório</label>
-                <h3 class="px-3">{{ repository.repository_id }}</h3>
-                <label class="fw-bold text-primary">Nome completo</label>
-                <h4 class="px-3">{{ repository.full_name }}</h4>
-                <label class="fw-bold text-primary">Descrição</label>
-                <p class="px-3">{{ repository.description }}</p>
-                <label class="fw-bold text-primary">Estrelas</label>
-                <p class="px-3">{{ repository.stargazers_count }}</p>
-                <label class="fw-bold text-primary">Url do repositório</label>
-                <p class="px-3"><a :href="repository.html_url" :title="repository.html_url" target="_blank">{{ repository.html_url }}</a></p>
-                <label class="fw-bold text-primary">HomePage do repositório</label>
-                <p class="px-3"><a :href="repository.homepage" :title="repository.homepage" target="_blank">{{ repository.homepage }}</a></p>
-                
-                <label class="fw-bold text-primary">Tópicos</label>
-                <p class="px-3">{{ repository.topics }}</p>
-                <label class="fw-bold text-primary">Criado em</label>
-                <p class="px-3">{{ repository.created_at }}</p>
-                <label class="fw-bold text-primary">Alterado em</label>
-                <p class="px-3">{{ repository.updated_at }}</p>
+                <h3 class="mb-3">Linguagem: {{ repository.language }}</h3>
+                <h4 class="mb-3">
+                    <img v-if="repository.avatar_url" :src="repository.avatar_url" height="40">
+                    {{ repository.name }}
+                </h4>
+                <ul class="list-content text-break">
+                    <li>
+                        <strong>ID do Repositório:</strong>
+                        {{ repository.repository_id }}</li>
+                    <li>
+                        <strong>Nome completo:</strong> {{ repository.full_name }}</li>
+                    <li>Estrelas: {{ repository.stargazers_count }}</li>
+                    <li>
+                        <strong>Url do repositório:</strong>
+                        <a :href="repository.html_url" :title="repository.html_url" target="_blank">
+                            {{ repository.html_url }}
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Tópicos</strong>
+                        <p class="text-break">
+                            {{ (repository.topics) }}
+                        </p>
+                    </li>
+                    <li>
+                        <strong>HomePage do repositório</strong>
+                        <p>
+                            <a :href="repository.homepage" :title="repository.homepage" target="_blank">
+                                {{ repository.homepage }}
+                            </a>
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Criado em:</strong> {{ repository.created_at }}
+                    </li>
+                    <li>
+                        <strong>Alterado em:</strong> {{ repository.updated_at }}
+                    </li>
+                </ul>
+                <h5>Descrição</h5>
+                <p>{{ repository.description }}</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-12">
-                <router-link to="/" class="btn btn-primary ">VOLTAR</router-link>
+                <button @click="$router.go(-1)" class="btn btn-primary">Voltar</button>
             </div>
         </div>
     </div>
 </template>
- 
+
 <script>
+    import Loading from "../Loading";
     export default {
+        components: {Loading},
         data() {
             return {
-                repository: {}
+                repository: {},
+                loading: false
             }
         },
         created() {
+            this.loading = true;
             this.axios
                 .get(`http://localhost:8000/api/respository/show/${this.$route.params.id}`)
                 .then((response) => {
                     this.repository = response.data;
+                    this.loading = false;
                 });
         },
         methods: {

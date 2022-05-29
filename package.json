@@ -25,6 +25,8 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "dotenv": "^16.0.1",
+        "fs": "^0.0.1-security",
         "laravel-vue-pagination": "^3.0.0",
         "moment": "^2.29.1",
         "vue-axios": "^3.2.4",
