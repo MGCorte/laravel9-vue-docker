@@ -68,18 +68,18 @@ cp .env.example .env
 docker-compose up -d --build
 
 # para istalar composer
-docker-compose run --rm composer install
+docker-compose exec app composer install
 
 # para gerar a chave do laravel
-docker-compose run --rm artisan key:generate
+docker-compose exec app php artisan key:generate
 
 # migrando tabelas na base de dados mysql inserindo dados
-docker-compose run --rm artisan migrate:refresh --seed
+docker-compose exec app php artisan migrate:refresh --seed
 
 # gera o link simbólico para a pasta storage
-docker-compose run --rm artisan storage:link
+docker-compose exec app php artisan storage:link
 ```
 ### Para testes automatizados
 ```shell
-docker compose run --rm artisan test
+docker-compose exec app php artisan test
 ```
