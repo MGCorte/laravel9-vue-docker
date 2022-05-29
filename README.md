@@ -39,21 +39,21 @@ Quando terminar, faça um Pull Request neste repo e avise-nos por email.
 ### Executar os comandos:
 ```shell
 # criar .env
-$ cp .env.example .env
+cp .env.example .env
 
 # para istalar compose
-$ composer install
+composer install
 
 # para gerar a chave do laravel
-$ php artisan key:generate
+php artisan key:generate
 
 # migrando tabelas na base de dados mysql inserindo dados
-$ php artisan migrate:refresh --seed
+php artisan migrate:refresh --seed
 ```
 
 ### Para testes automatizados
 ```shell
-$ php artisan test
+php artisan test
 ```
 
 # Ambiente de desenvolvimento Docker
@@ -62,24 +62,24 @@ $ php artisan test
 ### Executar os comandos:
 ```shell
 # criar .env
-$ cp .env.example .env
+cp .env.example .env
 
 # instalando imagem docker
-$ docker-compose up -d --build
+docker-compose up -d --build
 
 # para istalar composer
-$ docker-compose run --rm composer install
+docker-compose run --rm composer install
 
 # para gerar a chave do laravel
-$ docker-compose run --rm artisan key:generate
+docker-compose run --rm artisan key:generate
 
 # migrando tabelas na base de dados mysql inserindo dados
-$ docker-compose run --rm artisan migrate:refresh --seed
+docker-compose run --rm artisan migrate:refresh --seed
 
 # gera o link simbólico para a pasta storage
-$ docker-compose run --rm artisan storage:link
+docker-compose run --rm artisan storage:link
 ```
 ### Para testes automatizados
 ```shell
-$ docker compose run --rm artisan test
+docker compose run --rm artisan test
 ```
