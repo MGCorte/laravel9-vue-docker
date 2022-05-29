@@ -2361,9 +2361,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -42627,9 +42624,7 @@ var render = function () {
                       }),
                     ]
                   ),
-                  _vm._v(
-                    "\n                    Salvo na base local\n                "
-                  ),
+                  _vm._v("\n                Salvo na base local\n            "),
                 ])
               : _vm._e(),
             _vm._v(" "),
@@ -42993,7 +42988,7 @@ var render = function () {
                           ]
                         ),
                         _vm._v(
-                          "\n                        Salvar na balse local\n                    "
+                          "\n                    Salvar na balse local\n                "
                         ),
                       ]
                     ),
@@ -43020,22 +43015,22 @@ var render = function () {
               })
             : _vm._e(),
           _vm._v(
-            "\n                    " +
+            "\n                " +
               _vm._s(_vm.repository.name) +
-              "\n                "
+              "\n            "
           ),
         ]),
         _vm._v(" "),
         _c("ul", { staticClass: "list-content text-break" }, [
           _c("li", [
             _c("strong", [_vm._v("ID do Repositório:")]),
-            _vm._v("\n                        " + _vm._s(_vm.repository.id)),
+            _vm._v("\n                    " + _vm._s(_vm.repository.id)),
           ]),
           _vm._v(" "),
           _c("li", [
             _c("strong", [_vm._v("Nome completo:")]),
             _vm._v(
-              " " + _vm._s(_vm.repository.full_name) + "\n                    "
+              " " + _vm._s(_vm.repository.full_name) + "\n                "
             ),
           ]),
           _vm._v(" "),
@@ -43058,9 +43053,9 @@ var render = function () {
               },
               [
                 _vm._v(
-                  "\n                            " +
+                  "\n                        " +
                     _vm._s(_vm.repository.html_url) +
-                    "\n                        "
+                    "\n                    "
                 ),
               ]
             ),
@@ -43071,9 +43066,9 @@ var render = function () {
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                            " +
+                "\n                        " +
                   _vm._s(_vm.repository.topics) +
-                  "\n                        "
+                  "\n                    "
               ),
             ]),
           ]),
@@ -43093,9 +43088,9 @@ var render = function () {
                 },
                 [
                   _vm._v(
-                    "\n                                " +
+                    "\n                            " +
                       _vm._s(_vm.repository.homepage) +
-                      "\n                            "
+                      "\n                        "
                   ),
                 ]
               ),
@@ -43105,14 +43100,14 @@ var render = function () {
           _c("li", [
             _c("strong", [_vm._v("Criado em:")]),
             _vm._v(
-              " " + _vm._s(_vm.repository.created_at) + "\n                    "
+              " " + _vm._s(_vm.repository.created_at) + "\n                "
             ),
           ]),
           _vm._v(" "),
           _c("li", [
             _c("strong", [_vm._v("Alterado em:")]),
             _vm._v(
-              " " + _vm._s(_vm.repository.updated_at) + "\n                    "
+              " " + _vm._s(_vm.repository.updated_at) + "\n                "
             ),
           ]),
         ]),

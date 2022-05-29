@@ -43,9 +43,6 @@
                     </button>
                 </form>
             </div>
-<!--            <div class="col-6 col-md-6 text-center">-->
-<!--                <router-link to="/" class="nav-item btn btn-primary">Voltar ao início</router-link>-->
-<!--            </div>-->
         </div>
         <div class="row">
             <div class="col-md-12">
